@@ -1,0 +1,26 @@
+plugins {
+    id "java"
+    id "io.freefair.lombok" version "8.11"
+}
+
+allprojects {
+    apply plugin: "java"
+    apply plugin: "io.freefair.lombok"
+
+    group = 'dev.siebrenvde'
+    version = '1.0-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        if(name != "common") implementation project(":common")
+        testImplementation platform('org.junit:junit-bom:5.10.0')
+        testImplementation 'org.junit.jupiter:junit-jupiter'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
