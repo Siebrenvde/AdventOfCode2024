@@ -8,13 +8,11 @@ import java.util.*;
 @Getter
 public class Part1 {
 
-    public static String FILE_NAME = "input.txt";
-
     private final List<Integer> leftList = new ArrayList<>();
     private final List<Integer> rightList = new ArrayList<>();
 
     public Part1() {
-        InputReader.readInput(FILE_NAME).forEach(line -> {
+        InputReader.readInput().forEach(line -> {
             String[] parts = line.split(" {3}");
             leftList.add(Integer.parseInt(parts[0]));
             rightList.add(Integer.parseInt(parts[1]));

@@ -1,3 +1,4 @@
+import dev.siebrenvde.aoc2024.InputReader;
 import dev.siebrenvde.aoc2024.day01.Part1;
 import dev.siebrenvde.aoc2024.day01.Part2;
 import org.junit.jupiter.api.BeforeAll;
@@ -8,8 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class Day01Test {
 
     @BeforeAll
-    static void setFileName() {
-        Part1.FILE_NAME = "example.txt";
+    static void setTesting() {
+        InputReader.setTesting();
     }
 
     @Test
